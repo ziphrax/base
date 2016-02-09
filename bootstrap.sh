@@ -12,7 +12,8 @@ fi
 apt-get install -y nfs-common portmap
 
 # Copy accross the config file and restart nginx
-cp /vagrant/nginx.conf /etc/nginx/sites-available/default
+cp /vagrant/nginx/default /etc/nginx/sites-available/default
+cp /vagrant/nginx/nginx.conf /etc/nginx/nginx.conf
 service nginx restart
 
 # Get the latest nodejs
