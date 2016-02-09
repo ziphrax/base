@@ -8,6 +8,9 @@ if ! [ -L /var/www ]; then
   ln -fs /vagrant /var/www
 fi
 
+# install nfs
+apt-get install -y nfs-common portmap
+
 # Copy accross the config file and restart nginx
 cp /vagrant/nginx.conf /etc/nginx/sites-available/default
 service nginx restart
